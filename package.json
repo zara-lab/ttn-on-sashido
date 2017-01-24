@@ -1,22 +1,19 @@
 {
-    "name": "app",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "parse": "^1.9.2",
-        "parse-server": "~2.2.2",
-        "ttn": "^2.0.0-7"
-    },
-    "scripts": {
-        "start": "node index.js"
-    },
-    "engines": {
-        "node": ">=4.3"
-    }
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parse": "^1.9.2",
+    "parse-server": "~2.2.2",
+    "ttn": "^2.0.0-7"
+  },
+  "engines": {
+    "node": ">=4.3"
+  }
 }

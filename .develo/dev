@@ -1,0 +1,9 @@
+develo activate
+
+sh ../.develoenv
+
+root=`pwd`
+
+bash "$root/.develoenv"
+
+open -a "Visual Studio Code" --args "$root"

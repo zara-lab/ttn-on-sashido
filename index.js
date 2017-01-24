@@ -19,7 +19,7 @@ var api = new ParseServer(
 
   liveQuery:
   {
-    classNames: [] // List of classes to support for query subscriptions example: [ 'Posts', 'Comments' ]
+    classNames: ['TTNPayload'] // List of classes to support for query subscriptions example: [ 'Posts', 'Comments' ]
   },
 });
 
