@@ -61,13 +61,21 @@ var initTTN = function(config) {
     });
 
     client.on('message', function(deviceId, data) {
-        console.info('[INFO] ', 'Message:', deviceId, JSON.stringify(data, null, 2));
+        // console.info('[INFO] ', 'Message:', deviceId, JSON.stringify(data, null, 2));
 
         var TTNPayload = Parse.Object.extend('TTNPayload');
         var ttnPayload = new TTNPayload();
 
+
+        var formattedData = JSON.parse(JSON.stringify(data, null, 2))
+        formattedData.payload_raw = formattedData.payload_raw.data;
+
+        console.warn("================================================================================")
+        console.warn(formattedData)
+        console.warn("================================================================================")
+
         ttnPayload.set('deviceId', deviceId);
-        ttnPayload.set('data', data);
+        ttnPayload.set('data', formattedData);
 
         ttnPayload.save(null, {
             success: function(ttnPayload) {
